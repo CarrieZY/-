@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript基础一</title>
+	<script type="text/javascript">
+		window.onload=function(){
+		var btn=document.getElementById('but');
+		var text=document.getElementById('text');
+		var span=document.getElementById('api-display');
+
+		 btn.onclick=function(){
+		 	span.innerHTML=text.value;
+		 }
+		}
+		
+	</script>
+</head>
+<body>
+	<ladel>请输入北京的空气质量：
+	<input type="text" id="text">
+	</ladel>
+	<button id="but">确认填写</button>
+	<div>您输入的值是：<span id="api-display">尚无应用</span></div>
+</body>
+</html>
