@@ -1,0 +1,677 @@
+// 页面样式
+// 基本默认值
+html{
+	font-size:10px;
+	color:#222;
+
+}
+
+//文字选中的样式
+::selection{
+	background-color:#b3d4fc;
+	text-shadow:none;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+li{
+	list-style-type: none;
+}
+//工具样式
+//让元素直接在父元素中居中显示
+//加上!important;会使元素的优先级更高
+.center-back{display:block;
+margin-right:auto;
+margin-left:auto;
+}
+.pull-left{
+	float:left !important;
+}
+.pull-right{
+	float:right !important;
+}
+.text-right{
+	text-align: right !important;
+}
+.text-left{
+	text-align: left !important;
+}
+.text-center{
+	text-align: center !important;
+}
+.hide{
+	display:none !important;//直接隐藏 并挤掉该元素的空间
+}
+.show{display: block !important;}
+.invisible{
+	visibility: hidden;//不会挤占元素隐藏的空间
+}
+.text-hide{//隐藏文本 
+	font:0/0 a;
+	color:transparent;
+	text-shadow:none;
+	background-color:transparent;
+	border:0;
+}
+.clearfix:after{
+	clear: both;  
+}
+.clearfix:before,.clearfix:after{
+	content:'';
+	display: table;
+}
+
+.browserupgrade{
+	margin:0;
+	padding:0;
+	background: #ccc;
+}
+
+body{
+	font-size:12px;
+	line-height:1.5;
+	background-color:#f7f7f7;
+
+}
+a{color:#666;
+text-decoration: none;}
+a:hover,a:active{
+	color:#0ae;
+	text-decoration: underline;
+}
+//网站头部
+header{width:100%;}
+header .top{
+	line-height:30px;
+	padding:0 15px;
+	color:#fff;
+	background:#555;
+	border-bottom: 1px solid #ecc000;
+}
+header .top .tel{
+	float:left;
+}
+header .top ul{text-align: right;}
+header .top ul li{
+	display:inline-block;}
+header .top ul li + li{
+	border-left:1px solid #999;
+	margin-left:-3px;
+}
+header .top ul li a{
+	display:inline-block;
+	padding:0 15px;
+	color:#fff;
+}
+@media only screen and (max-width:800px){
+header .top ul li a{
+	padding:0 5px;
+}
+}
+@media only screen and (min-width:480px) and (max-width:800px){
+
+}
+@media only screen and (max-width:480px){
+	header .top .tel,
+	header .top ul li:nth-child(3),header .top ul li:nth-child(4){
+	display: none;
+}
+}
+header .main{
+	padding:0;
+}
+header .main .brand{
+	float:left;
+	padding:10px 15px;
+}
+header .main ul{
+	text-align: right;
+}
+header .main ul li{
+	display:inline-block;
+	border-left:1px solid #f0ede9;
+}
+header .main ul li a{
+	display: inline-block;
+	padding:20px;
+	line-height: 15px;
+	font-size:16px;
+	font-weight:bold;
+	color:#7c7a65;
+	text-decoration: none;
+}
+header .main ul li a:hover,
+header .main ul li a:active,header .main ul li a.active{
+color:#ffb300;
+background-color:#f8f6f1;
+}
+@media only screen and (max-width:800px){
+header .main .brand{
+		float:none;
+		display: block;
+		padding:0;
+		margin:15px auto 5px ;
+		text-align: center;
+	}
+header .main ul{
+	text-align: center;
+}
+header .main ul li{border:none;}
+header .main ul li a{padding:0 15px;}
+}
+@media only screen and (min-width:480px) and (max-width:800px){
+	header .main .brand{
+		float:none;
+		display: block;
+		padding:0;
+		margin:10px auto ;
+		text-align: center;
+	}
+}
+@media only screen and (max-width:480px){
+	header .main ul li{
+		line-height:30px;
+	}
+	header .main ul li:first-child{
+		display: none;
+	}
+	header .main ul li a{
+		font-weight:normal;
+		padding:0 0 5px;
+	}
+}
+.ad{
+	display: none;
+}
+.container{width:100%;}
+.transaction{
+	width:100%;
+	background-color:#7c7365;
+}
+.trans-content{
+	max-width:90%;
+	margin:0 auto;
+	font-style: 15px;
+}
+.trans-date{
+	float: left;
+	padding:10px;
+	text-align: left;
+}
+.trans-date span{
+	display: inline-block;
+	line-height: 30px;
+	color:#fff;
+}
+.trans-date span.trans-money{
+	font-size: 22px;
+	color:#ff9900;
+	letter-spacing: 3px;
+	background-color:rgba(255,255,255,0.9);
+	box-shadow: 1px 2px 1px #333 inset; 
+}
+.trans-report{
+	text-align: right;
+}
+.trans-report a{
+	display: inline-block;
+	padding:10px;
+	line-height: 30px;
+	color:#fff;
+}
+@media only screen and (max-width:800px){
+.trans-date{
+	padding:10px 5px;
+}
+.trans-date span{
+	font-size: 12px;
+}
+.trans-date span .trans-money{
+	font-size: 16px;
+	margin:0;
+	padding:0;
+	letter-spacing: inherit;
+	box-shadow: none;
+	background:transparent;
+}
+.trans-report a{
+	font-size: 12px;
+}
+}
+@media only screen and (max-width:480px) and (max-width:800px){
+
+}
+
+@media only screen and (max-width:480px){
+	.transaction{
+		padding:5px 0;
+	}
+	.trans-date,.trans-report{
+		float:none;
+		text-align: center;
+	}
+	.trans-date,.trans-report a{
+		padding: 0;
+	}
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.feature{
+	width:90%;
+	margin:20px auto;
+	font-size: 0;
+	}
+.feature .item{
+	box-sizing: border-box;
+	display: inline-block;
+	width:calc(33.333% - 10px);
+	padding:10px;
+	font-size:14px;
+	background-color:#fff;
+	box-shadow: 0 0 4px #ccc;	
+}
+.feature .item + .item{
+	margin-left:15px;
+}
+.feature .item h3{
+	display: inline-block;
+	width:40%;
+	margin:0;
+	padding:0;
+	vertical-align: top;
+	text-align: center;
+	font-size:33px;
+	color:#ff9900;
+}
+.feature .item p{
+	display: inline-block;
+	width:55%;
+	margin:0;
+	padding:0;
+	color:#999;
+}
+@media only screen and (max-width:800px){
+
+}
+@media only screen and (min-width:480px) and (max-width:800px){
+.feature .item h3,.feature .item p{
+	display: block;
+	width:100%;
+	font-size: 26px;
+	text-align: center;
+}
+.feature .item p{
+	font-size: 12px;
+}
+}
+@media only screen and (max-width:480px){
+	.feature{
+		width:96%;
+		margin:10px auto;  
+	}
+	.feature .item{
+		display: block;
+		width:auto;
+	}
+	.feature .item + .item{
+		margin:10px 0 0;
+	}
+}
+
+.notice{
+	width:90%;
+	margin:20px auto;
+	font-size: 14px;
+	line-height:30px;
+	background-color:#fff;
+	box-shadow: 0 0 4px #ccc;
+}
+.notice a{
+	float:left;
+	display: inline-block;
+	width:70%;
+	margin-left:20px;
+	text-decoration: none;
+}
+.notice a:first-child{
+	text-overflow:ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.notice a:first-child:before{
+	content:'最新公告：\00a0\00a0';
+	color:#aaa;
+}
+.notice a span{
+	color:#999;
+	font-size: 12px;
+	margin-right:10px;
+}
+.notice .more{
+	width:auto;
+	color:#ff9900;
+	margin-right:20px;
+	float:right;
+}
+@media only screen and (max-width:480px){
+	.notice{
+		width:96%;
+		margin:10px auto;
+		font-size: 12px;
+	}
+	.notice a{
+		margin-left:10px;
+	}
+	.notice a span{
+		display: none;
+	}
+}
+.product{
+	width:90%;
+	margin: 20px auto;
+	font-size: 14px;
+	background-color:#f5f9fa;
+	border-top:2px solid #ff9900;
+	box-shadow: 0 0 4px #ccc;
+}
+.product h2{
+	float:left;
+	width:20%;
+	margin-top: 30px;
+	text-align: center;
+	font-size: 24px;
+	font-weight:normal;
+	color:#635c51;
+}
+.product h2 em{
+	display: block;margin-top:10px;
+	font-size: 16px;
+}
+.product h2 em:first-child{
+	margin-top:40px;
+}
+.product .product-content{
+	float:right;
+	width:79.5%;
+	border-left:1px solid #eee;
+	background:#fff;
+}
+.product .product-content .item{
+	width:100%;
+	text-align: center;
+}
+.product .product-content .item + .item{
+	border-top:1px solid #eee;
+}
+.product .product-content .item h3{
+	float:left;
+	width:30%;
+	margin:15px 0;
+	font-size:14px;
+	font-weight:normal;
+}
+.product .product-content .item h3 em{
+	margin-right:5px;
+	font-size:36px;
+	font-style: normal;
+	color:#8b999d;
+}
+.product .product-content .item h3 i{
+	display: block;
+	font-size: 12px;
+	font-style: normal;
+	color:#999;
+}
+.product .product-content .item .info{
+	float:left;
+	width:48%;
+	padding:10px;
+	border-left:1px solid #eee;
+	border-right: 1px solid #eee;
+	font-size:14px;
+}
+.product .product-content .item .info p{
+	float:left;
+	display: inline-block;
+	text-align: center;
+	width:56%;
+}
+.product .product-content .item .info p:last-child{
+	width:40%;
+}
+.product .product-content .item .info p span{
+	display: block;
+	font-size: 24px;
+	font-style: normal;
+	color:#999;
+}
+.product .product-content .item .info p span i{
+	font-size:12px;
+	font-style: normal;
+	color:#999;
+}
+.product .product-content .item .buy{
+	float:left;
+	width:calc(22% - 44px);
+	padding:10px;
+}
+.product .product-content .item .buy a{
+	display: block;
+	width:90%;
+	margin:15px auto;
+	max-width:120px;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	color:#fff;
+	background-color: #ff9900;
+	border-radius: 5px;
+}
+.product .product-content .item .buy a:hover,.product .product-content .item .buy a:active{
+	background-color:#ffc468; 
+}
+.product .product-content .item .buy a.disabled{
+	background-color:#ccc !important;
+	cursor: not-allowed;
+}
+@media only screen and (max-width:800px){
+	.product h2{
+	float:none;
+	width:100%;
+	margin-top:20px;
+	font-size: 22px;
+}
+.product h2 em:first-child{
+	margin-top:0;
+}
+.product h2 em{
+	display: inline;
+	font-size: 12px;
+}
+.product .product-content {
+	float:none;
+	width:100%;
+}
+.product .product-content .item h3{
+	margin-bottom: 0;
+}
+.product .product-content h3 em{font-size: 24px;}
+.product .product-content .item .info{
+	padding:10px 10px 0;
+	font-size: 12px;
+}
+.product .product-content .item .info p span{
+	font-size: 20px;
+}
+.product .product-content .item .buy a{
+	margin:5px auto;
+}
+}
+@media only screen and (max-width:480px){
+	.product h2 em:first-child:before{
+		content: ' ';
+		display: table;
+	}
+	.product .product-content .item h3 em{
+		font-size: 20px;
+		margin-right:0;
+	}
+	.product .product-content .item .info{
+		float:right;
+		width:70%;
+		padding:10px 0;
+		border:none;
+	}
+	.product .product-content .item .info p span{
+		font-size: 18px;
+	}
+	.product .product-content .item .buy{
+		clear: both;
+		float:none;
+		width:100%;
+		padding:10px 0 20px;
+	}
+	.product .product-content .item .buy a{
+		max-width: 260px;
+	}
+}
+.footer{
+	padding:30px 0;
+	background:#fff;
+	border-top:2px solid #ccc;
+}
+.footer-content{
+	width:90%;
+	margin:0 auto;
+}
+.footer-content .brand{
+	float:left;
+	display: block;
+	filter:grayscale(100%);
+	-webkit-filter:grayscale(100%);
+	width:20%;
+	height:35px;
+	background:url('../img/logo@1x.png')no-repeat left;
+	background-size:150px 35px;
+}
+.footer-content ul{
+	float:left;
+	width:15%;
+}
+.footer-content ul li{
+	font-size:14px;
+	line-height:24px;
+}
+.footer-content ul li.title{
+	font-size: 16px;
+	line-height: 30px;
+}
+@media only screen and (max-width:800px){
+.footer-content .brand{
+	display: none;
+}
+.footer-content ul{width:20%;}
+.footer-content ul li{
+	font-size: 12px;
+	line-height:20px;
+}
+.footer-content ul li.title{font-size: 14px;line-height:25px;}
+}
+@media only screen and (max-width:480px){
+	.footer-content{width:98%;}
+	.line-height ul li.title{font-size: 12px;line-height:20px;}
+}
+footer{width:100%;
+padding:30px 0 50px;
+background-color:#cccccc;}
+footer ul{text-align: center;}
+footer ul li{display: inline-block;}
+footer ul li .icon{
+	display: inline-block;
+	text-indent: -999px;
+	margin-right:15px;
+	background: url(http://i.alipayobjects.com/e/201307/jebmKcbrh.png)no-repeat;
+	background-size:466px 447px;
+	overflow: hidden;
+}
+footer ul li .icon-zfywxk{
+	width:38px;
+	height:27px;
+	background-position: -369px -45px;
+}
+footer ul li .icon-pcirk{
+	width:78px;
+	height:27px;
+	background-position:-110px -96px;
+}
+footer ul li .icon-visayz{
+	width:36px;
+	height:27px;
+	background-position: -426px -90px;
+}
+footer ul li .icon-vsjmfw{
+	width:63px;
+	height:27px;
+	margin-right:13px;
+	background-position: -401px -186px;
+}
+footer ul li .icon-wlgs{
+	width:22px;
+	height:27px;
+	background-position: -48px -48px;
+}
+footer ul li .icon-rzcx{
+	width:75px;
+	height:27px;
+	background-position:0 -320px;
+}
+footer ul li .icon-gs{
+	width:30px;
+	height:30px;
+	margin-right:0;
+	background:url(http://os.alipayobjects.com/rmsportal/lybcjqloSPjMAFg.png)no-repeat;
+	background-size: 30px;
+}
+footer p{
+	text-align: center;
+	color:#999;
+}
+@media print{
+	*,
+	*:before,
+	*:after{
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow: none !important;
+		text-shadw:none !important;
+	}
+	a,
+	a:visited{
+		text-decoration: underline;
+	}
+	a[href]:after{
+		content: '('attr(href)')';
+	}
+    abbr[title]:after{
+    	content:'('attr(title)')';
+    }
+    a[href^='#']:after,a[href^="javascript:"]:after{content: '';}
+   pre,blockquote{
+   	border:1px solid #999;
+   	page-break-inside: avoid;
+   }
+   thead{
+   	display: table-header-group;
+   }
+   tr,
+   img{max-width: 100% !important;}
+   p,h2,h3{
+   	orphans: 3;
+   	widows: 3;
+   }
+   h2,h3{page-break-after: avoid;}
+}
