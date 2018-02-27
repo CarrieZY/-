@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>整页滚动</title>
+	<meta content="" name="description">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<style type="text/css">
+		*{margin:0;padding:0;}
+		html, body{width:100%;height:100%;}
+		#content{height: 100%;background:red;}
+		.side{width:100%;height:100%;}
+		.div1{background: url(img1/音乐总监.JPG)center fixed;}
+		.div2{background: url(img1/冬日运动会/1.jpg)center fixed;}
+		.div3{background: url(img1/失恋的简亓.JPG)center fixed;}
+		.div4{background: url(img1/大明星.JPG)center fixed;}
+
+		.l-nav{width:100px;height:400px;position: fixed;top:30%;left:60px;background:url(img/nav.png)no-repeat;}
+		.l-nav ul {list-style: none;font-size: 12px;margin-top:7px;color:#666;}
+		.l-nav ul li{margin-bottom: 56px;padding-left:40px;line-height:20px;}
+		.l-nav ul li.change{background:url(img/nav_cho.png)no-repeat 0 -1px;color:#23DD91;}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div class="side div1"></div>
+		<div class="side div2"></div>
+		<div class="side div3"></div>
+		<div class="side div4"></div>
+		<div class="l-nav">
+			<ul>
+				<li class="change">音乐总监</li>
+				<li>程以清</li>
+				<li>简大经济</li>
+				<li>大明星</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		$(window).scroll(function(){
+			var n=parseInt($(window).scrollTop()/$(window).height());
+
+			$('.l-nav ul li').eq(n).addClass('change').siblings().removeClass('change');
+
+		})
+	}
+</script>
